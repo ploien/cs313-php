@@ -1,5 +1,5 @@
 <?php 
-   $val = 4;
+   $val = 4 + "cat";
    
    echo $val;
 ?>
