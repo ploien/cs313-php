@@ -4,6 +4,6 @@ function clickMe() {
 
 function changeColor() {
 	
-	var color = document.getElementById("colorInput").value;
-	document.getElementById("div1").style.backgroundColor = color;
+	var color = $("#colorInput").css("background-color");
+	$("#div1").css("background-color", color);
 }
