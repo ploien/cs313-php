@@ -21,3 +21,7 @@
 	margin: 24px 12px 24px;
 	text-align:center;
 }
+
+.divs:hover {
+	text-decoration: bold;
+}
