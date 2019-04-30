@@ -1,0 +1,18 @@
+#div1 {
+	background-color: blue;
+	font-size: 24px;
+}
+
+#div2 {
+	background-color: green;
+	font-size: 20px;
+}
+
+#div3 {
+	background-color: purple;
+	font-size: 16px;
+}
+
+#myButton {
+	display: block;
+}
