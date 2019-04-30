@@ -16,3 +16,8 @@
 #myButton {
 	display: block;
 }
+
+.divs {
+	margin: 24px 12px 24px;
+	text-align:center;
+}
