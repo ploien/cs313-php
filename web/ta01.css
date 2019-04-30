@@ -23,5 +23,5 @@
 }
 
 .divs:hover {
-	text-decoration: bold;
+	font-weight: bold;
 }
