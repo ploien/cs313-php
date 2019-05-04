@@ -7,3 +7,9 @@ img {
 	flex-flow: row wrap;
 	justify-content: space-around;
 }
+
+.flex-column {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+}
