@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Peter Oien's Homepage</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css">
   </head>
   <body>
     <?php include 'header.php';?>

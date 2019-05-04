@@ -6,5 +6,6 @@
   </head>
   <body>
     <?php include 'header.php';?>
+    <h2>Assignments go here</h2>
   </body>
 </html>
