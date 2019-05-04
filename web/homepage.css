@@ -1,3 +1,8 @@
 img {
 	max-width: 120px;
 }
+
+.flex-row {
+	display: flex;
+	flex-flow: row wrap;
+}
