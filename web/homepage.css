@@ -4,6 +4,7 @@ img {
 
 div {
 	text-align: center;
+	margin: auto;
 }
 
 .flex-row {
@@ -45,7 +46,7 @@ header {
 
 a {
 	margin: 8px 24px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 a:visited {
@@ -57,7 +58,7 @@ a:hover {
 }
 
 p {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .text {
