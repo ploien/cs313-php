@@ -24,7 +24,7 @@ body {
 }
 
 p {
-	font-size: 20px;
+	font-size: 18px;
 	color: white;
 }
 
@@ -47,6 +47,10 @@ a:visited {
 
 a:hover {
 	color: green;
+}
+
+.text {
+	max-width = 600px;
 }
 
 .flex-row {
