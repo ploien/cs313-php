@@ -21,7 +21,7 @@
             <h2 id="interestHeader">Interests</h2>
             <div class="text">
             	<p>One of my favorite passtimes has always been reading. I particularly enjoy reading Fantasy books. 
-            	Below I've listed a couple of the latest series that I've read, as well as one of my all time favorites</p>
+            	Below I've listed a couple of the latest series that I've read, as well as one of my all time favorites.</p>
             </div>
         </div>
         
