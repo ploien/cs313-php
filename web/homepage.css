@@ -27,6 +27,7 @@ body {
 
 
 header {
+	margin: 0px;
 	text-align: center;
 	background-color: #DDDBF1;
 	color: #383F51;
@@ -38,6 +39,19 @@ header {
 
 a {
 	margin: 8px 24px;
+	font-size: 16px;
+}
+
+a:visited {
+	color: hotpink;
+}
+
+a:hover {
+	color: green;
+}
+
+p {
+	font-size: 16px;
 }
 
 .tooltip {
