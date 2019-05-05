@@ -15,18 +15,6 @@ h2 {
 	text-decoration: underline;
 }
 
-.flex-row {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-}
-
-.flex-column {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-around;
-}
-
 body {
 	border: 0px;
 	margin: 0px;
@@ -35,6 +23,10 @@ body {
 	color: #DDDBF1;
 }
 
+p {
+	font-size: 20px;
+	color: white;
+}
 
 header {
 	margin: 0px;
@@ -42,14 +34,6 @@ header {
 	text-align: center;
 	background-color: #DDDBF1;
 	color: #383F51;
-}
-
-.headerLink {
-	text-decoration: none;
-}
-
-.headerLink:visited {
-	color: #0d8686;
 }
 
 a {
@@ -63,11 +47,26 @@ a:visited {
 
 a:hover {
 	color: green;
+}
 
+.flex-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
 
-p {
-	font-size: 20px;
-	color: white;
+.flex-column {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+}
+
+.headerLink {
+	text-decoration: none;
+}
+
+.headerLink:visited {
+	color: #0d8686;
 }
 
 .text {
