@@ -52,6 +52,7 @@ a:hover {
 .text {
 	max-width: 600px;
 	text-align: center;
+	margin: auto;
 }
 
 .flex-row {
