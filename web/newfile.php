@@ -3,6 +3,7 @@
   <head>
     <title>Peter Oien's Homepage</title>
     <link rel="stylesheet" type="text/css" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
     <?php include 'header.php';?>
