@@ -10,7 +10,7 @@
     <div class="flex-column">
         <div>
             <h2 id="aboutMeHeader">About Me</h2>
-            <div class="text">
+            <div>
             	<p>I'm originally from Seattle, WA but currently live in Rexburg, ID in order to attend school and major in Software Engineering.
             	My wife is from Mexico City and I served  a Mission in Oaxaca, Mexico, so we enjoy speaking Spanish with each other at home.</p>
             </div>
@@ -18,7 +18,7 @@
         
         <div>
             <h2 id="interestHeader">Interests</h2>
-            <div class="text">
+            <div>
             	<p class="about">One of my favorite passtimes has always been reading. I particularly enjoy reading Fantasy books. Below I've listed a couple of the laatest series that I've read, as well as one of my all time favorites</p>
             </div>
         </div>
