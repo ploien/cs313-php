@@ -21,11 +21,15 @@ div {
 body {
 	border: 0px;
 	margin: 0px;
+	background-color: #3C4F76;
+	color: #DDDBF1;
 }
 
 
 header {
 	text-align: center;
+	background-color: #DDDBF1;
+	color: #383F51;
 }
 
 .headerLink {
