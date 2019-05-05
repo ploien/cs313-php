@@ -50,7 +50,7 @@ a:hover {
 }
 
 .text {
-	max-width = 600px;
+	max-width: 600px;
 }
 
 .flex-row {
@@ -72,10 +72,3 @@ a:hover {
 .headerLink:visited {
 	color: #0d8686;
 }
-
-.text {
-	border-radius: 5px;
-	background-color: #DDDBF1;
-	color: #3C4F76;
-}
-
