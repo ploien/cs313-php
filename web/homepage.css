@@ -2,6 +2,10 @@ img {
 	max-width: 120px;
 }
 
+div {
+	text-align: center;
+}
+
 .flex-row {
 	display: flex;
 	flex-flow: row wrap;
