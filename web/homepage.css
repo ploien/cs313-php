@@ -29,6 +29,7 @@ body {
 
 header {
 	margin: 0px;
+	padding: 0px;
 	text-align: center;
 	background-color: #DDDBF1;
 	color: #383F51;
@@ -38,9 +39,13 @@ header {
 	text-decoration: none;
 }
 
+.headerLink:visited {
+	color: blue;
+}
+
 a {
 	margin: 8px 24px;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 a:visited {
@@ -52,7 +57,13 @@ a:hover {
 }
 
 p {
-	font-size: 16px;
+	font-size: 20px;
+}
+
+.text {
+	border-radius: 5px;
+	background-color: #DDDBF1;
+	color: #3C4F76;
 }
 
 .tooltip {
