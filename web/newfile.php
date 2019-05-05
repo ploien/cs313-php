@@ -31,7 +31,9 @@
             </div>
             
             <div>
-              <h3><a href="http://www.brentweeks.com/series/the-lightbringer-series/">Lightbringer Series</a></h3>
+              <h3 class="tooltip"><a href="http://www.brentweeks.com/series/the-lightbringer-series/">Lightbringer Series</a>
+              	<span class="tooltiptext">http://www.brentweeks.com/series/the-lightbringer-series/</span>
+              </h3>
               <h4>The Black Prism</h4>
               <img src="Weeks_Black-Prism-TP.jpg">
               <h4>The Blinding Knife</h4>
