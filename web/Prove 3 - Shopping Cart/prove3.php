@@ -43,7 +43,7 @@
 	                document.getElementById("number").value = itemsInCart[0].numItems;
 	            }
 		 	};
-		 	request.open("GET", addToCart.php? + cartItems, true);
+		 	request.open("GET", "addToCart.php?" + cartItems, true);
 		 	request.send();	
 	 	}
      </script>
