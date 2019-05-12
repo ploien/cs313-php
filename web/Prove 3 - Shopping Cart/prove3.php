@@ -15,9 +15,11 @@
      
      <script type="text/javascript">
 
-	 	function addToCart() {
+	 	/*function addToCart() {
 		 	var request = new XMLHttpRequest();
-		 	request.onreadystatechange
+		 	request.onreadystatechange = function() {
+		 	}
+	 	}*/
      </script>
   </head>
   <body>
