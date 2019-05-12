@@ -25,17 +25,17 @@
   	 <link rel="stylesheet" type="text/css" href="prove3.css">
      <title>Prove 3 - Shopping Cart</title>
      
-     <script type="text/javascript">
-
+     <script>
+     
 	 	function addToCart() {
 
 		 	var elotes = document.getElementById("elote").value;
 		 	var sopes = document.getElementById("sope").value;
 		 	var tacos = document.getElementById("taco").value;
-
 		 	var cartItems = "elote=" + elotes + "&sopes=" + sopes + "&tacos=" + tacos;
 		 	
 		 	var request = new XMLHttpRequest();
+		 	
 		 	request.onreadystatechange = function() {
 		 		if (this.readyState == 4 && this.status == 200) {
 			 		
@@ -43,14 +43,9 @@
 	                document.getElementById("number").value = itemsInCart[0].numItems;
 	            }
 		 	};
-
 		 	request.open("GET", addToCart.php? + cartItems, true);
-		 	request.send();
-
-		 	
+		 	request.send();	
 	 	}
-
-	 	
      </script>
   </head>
   <body>
