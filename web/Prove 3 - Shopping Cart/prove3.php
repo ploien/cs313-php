@@ -32,6 +32,7 @@
          <th>Description</th>
          <th>Price</th>
          <th>Quantity</th>
+         <th>Add to cart</th>
        </tr>
        <tr>
          <td><img alt="Elote" src="elote.jpg"></td>
