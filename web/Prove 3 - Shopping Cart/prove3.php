@@ -39,7 +39,7 @@
 		 	request.onreadystatechange = function() {
 		 		if (this.readyState == 4 && this.status == 200) {
 			 		
-					var itemsInCart = json.parse(this.responseText);
+					var itemsInCart = JSON.parse(this.responseText);
 	                document.getElementById("number").value = itemsInCart[0].numItems;
 	            }
 		 	};
