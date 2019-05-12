@@ -70,21 +70,21 @@
          <td>Elote</td>
          <td>$1.50</td>
          <td><input type="number" name="elote" id="elote"></td>
-         <td><input type="submit">Add to Cart</input></td>
+         <td><button type="button" onclick="addToCart()">Add to Cart</button></td>
        </tr>
        <tr>
          <td><img alt="Sope" src="sope.jpg"></td>
          <td>Sope(3)</td>
          <td>$4.99</td>
          <td><input type="number" name="sope" id="sope"></td>
-         <td><input type="submit">Add to Cart</input></td>
+         <td><button type="button" onclick="addToCart()">Add to Cart</button></td>
        </tr>
        <tr>
          <td><img alt="Taco al Pastor" src="taco.jpg"></td>
          <td>Tacos al Pastor(5)</td>
          <td>$7.50</td>
          <td><input type="number" name="taco" id="taco"></td>
-         <td><input type="submit">Add to Cart</input></td>
+         <td><button type="button" onclick="addToCart()">Add to Cart</button></td>
        </tr>
      </table>
   </body>
