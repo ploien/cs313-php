@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	 <link rel="stylesheet" type="text/css" href="prove3.css">
      <title>Prove 3 - Shopping Cart</title>
      
      <script type="text/javascript">
