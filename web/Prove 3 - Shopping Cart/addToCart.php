@@ -12,6 +12,17 @@
    $cartItems = $elotes + $sopes + $tacos;
    $_SESSION["cartItems"] +=  $cartItems;
    
-   echo "{ \"numItems\":\"" . $cartItems . "\" }";
+   class items {
+       
+       public $number;
+   }
+   
+   $numItems = new items();
+   $numItems->number = $cartItems;
+   
+   $json = json_encode($numItems);
+   
+   
+   echo $json;
    
 ?>
