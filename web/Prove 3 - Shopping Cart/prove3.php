@@ -33,7 +33,7 @@
 		 	var sopes = document.getElementById("sope").value;
 		 	var tacos = document.getElementById("taco").value;
 		 	
-		 	var cartItems = "elote=" + elotes + "&sopes=" + sopes + "&tacos=" + tacos;
+		 	var cartItems = "elote=" + elotes + "&sope=" + sopes + "&taco=" + tacos;
 		 	
 		 	var request = new XMLHttpRequest();
 		 	
