@@ -42,6 +42,10 @@
 			 		
 					var itemsInCart = JSON.parse(this.responseText);
 	                document.getElementById("number").value = itemsInCart.number;
+
+	                document.getElementById("elote").value = 0;
+	    		 	document.getElementById("sope").value = 0;
+	    		 	document.getElementById("taco").value = 0;
 	            }
 		 	};
 		 	request.open("GET", "addToCart.php?" + cartItems, true);
