@@ -42,17 +42,36 @@
 			 		
 					var itemsInCart = JSON.parse(this.responseText);
 	                document.getElementById("number").value = itemsInCart.number;
+
+	                <?php echo "Added items to cart"; ?>
 	            }
 		 	};
 		 	request.open("GET", "addToCart.php?" + cartItems, true);
 		 	request.send();	
+
+		 
 	 	}
+
+	 	function reset() {
+
+		 	var request = new XMLHttpRequest();
+
+		 	request.open("GET", "reset.php", true);
+		 	request.send();
+
+		 	document.getElementById("number").value = 0;
+		 	document.getElementById("elote").value = 0;
+		 	document.getElementById("sope").value = 0;
+		 	document.getElementById("taco").value = 0;
+	 	}
+	 	
      </script>
   </head>
   <body>
      <header><h1>Shopping Cart</h1></header>
      <output id="number"></output>
      <label for="number">Items in Cart</label>
+     <button type="button" id="reset" onclick="reset()">Reset</button>
      <table>
        <tr>
          <th>Item</th>
