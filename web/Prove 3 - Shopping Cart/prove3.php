@@ -42,8 +42,6 @@
 			 		
 					var itemsInCart = JSON.parse(this.responseText);
 	                document.getElementById("number").value = itemsInCart.number;
-
-	                <?php echo "Added items to cart"; ?>;
 	            }
 		 	};
 		 	request.open("GET", "addToCart.php?" + cartItems, true);
