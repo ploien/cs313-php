@@ -9,8 +9,8 @@
    $_SESSION["sopes"] += $sopes;
    $_SESSION["tacos"] += $tacos;
    
-   $cartItems = $elotes + $sopes + $tacos;
-   $_SESSION["cartItems"] +=  $cartItems;
+   $cart = $elotes + $sopes + $tacos;
+   $_SESSION["cartItems"] +=  $cart;
    
    class items {
        
@@ -18,7 +18,7 @@
    }
    
    $numItems = new items();
-   $numItems->number = $cartItems;
+   $numItems->number = $cart;
    
    $json = json_encode($numItems);
    
