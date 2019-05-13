@@ -18,7 +18,7 @@
    }
    
    $numItems = new items();
-   $numItems->number = $cart;
+   $numItems->number = $_SESSION["cartItems"];
    
    $json = json_encode($numItems);
    
