@@ -70,9 +70,12 @@
      </script>
   </head>
   <body>
-     <header><h1>Shopping Cart</h1></header>
-     <output id="number"></output>
+     <header>
+     	<h1>Shopping Cart</h1>
+     	<a href="cartView.php"></a>
+     </header>
      <label for="number">Items in Cart</label>
+     <output id="number"></output>
      <button type="button" id="reset" onclick="reset()">Reset</button>
      <table>
        <tr>
