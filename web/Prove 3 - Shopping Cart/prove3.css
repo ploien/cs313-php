@@ -4,3 +4,7 @@ img {
 	max-width: 160px;
 	height: auto;
 }
+
+table, th, td {
+	text-align: center;
+}

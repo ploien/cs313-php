@@ -24,52 +24,9 @@
   <head>
   	 <link rel="stylesheet" type="text/css" href="prove3.css">
      <title>Prove 3 - Shopping Cart</title>
-     
-     <script>
-     
-	 	function addToCart() {
-
-		 	var elotes = document.getElementById("elote").value;
-		 	var sopes = document.getElementById("sope").value;
-		 	var tacos = document.getElementById("taco").value;
-		 	
-		 	var cartItems = "elote=" + elotes + "&sope=" + sopes + "&taco=" + tacos;
-		 	
-		 	var request = new XMLHttpRequest();
-		 	
-		 	request.onreadystatechange = function() {
-		 		if (this.readyState == 4 && this.status == 200) {
-			 		
-					var itemsInCart = JSON.parse(this.responseText);
-	                document.getElementById("number").value = itemsInCart.number;
-
-	                document.getElementById("elote").value = 0;
-	    		 	document.getElementById("sope").value = 0;
-	    		 	document.getElementById("taco").value = 0;
-	            }
-		 	};
-		 	request.open("GET", "addToCart.php?" + cartItems, true);
-		 	request.send();	
-
-		 
-	 	}
-
-	 	function reset() {
-
-		 	var request = new XMLHttpRequest();
-
-		 	request.open("GET", "reset.php", true);
-		 	request.send();
-
-		 	document.getElementById("number").value = 0;
-		 	document.getElementById("elote").value = 0;
-		 	document.getElementById("sope").value = 0;
-		 	document.getElementById("taco").value = 0;
-	 	}
-	 	
-     </script>
+     <script src="prove3.js"></script>
   </head>
-  <body>
+  <body onload="addToCart()">
      <header>
      	<h1>Shopping Cart</h1>
      	<a href="cartView.php">View Cart</a>
