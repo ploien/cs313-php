@@ -72,7 +72,7 @@
   <body>
      <header>
      	<h1>Shopping Cart</h1>
-     	<a href="cartView.php"></a>
+     	<a href="cartView.php">View Cart</a>
      </header>
      <label for="number">Items in Cart</label>
      <output id="number"></output>
