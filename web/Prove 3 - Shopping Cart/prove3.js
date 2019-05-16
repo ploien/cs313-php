@@ -13,13 +13,13 @@ function loadPage() {
 	   		var cartItems = JSON.parse(this.responseText);
 	
 	   		tableText += "<tr><td>Elotes</td><td>" + cartItems.elotes + "</td><td>$" + (1.50*cartItems.elotes) + "</td>"
-	   		              + "<td><input id='elote' type='number' value='" + cartItems.elotes + "onchange='changeCart()'></input></tr>";
+	   		              + "<td><input id='elote' type='number' value='" + cartItems.elotes + "'onchange='changeCart()'></input></tr>";
 	   		
 	   		tableText += "<tr><td>Sopes(3)</td><td>" + cartItems.sopes + "</td><td>$" + (4.99*cartItems.sopes) + "</td>"
-	   					  + "<td><input id='sope' type='number' value='" + cartItems.sopes + "onchange='changeCart()'></input></tr>";
+	   					  + "<td><input id='sope' type='number' value='" + cartItems.sopes + "'onchange='changeCart()'></input></tr>";
 	   		
 	   		tableText += "<tr><td>Tacos(5)</td><td>" + cartItems.tacos + "</td><td>$" + (7.50*cartItems.tacos) + "</td>"
-	   					  + "<td><input id='taco' type='number' value='" + cartItems.tacos + "onchange='changeCart()'></input></tr>";
+	   					  + "<td><input id='taco' type='number' value='" + cartItems.tacos + "'onchange='changeCart()'></input></tr>";
 	   		
 	   		document.getElementById("cart").innerHTML = tableText;
 	   }
