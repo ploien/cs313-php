@@ -13,13 +13,9 @@
  
 	echo "<h1>Scripture Resources</h1>";
      
-	
-	$db->query('SELECT * FROM scriptures WHERE id=' . $_GET["id"] . ';') as $row;
-
+	$db->query('SELECT * FROM scriptures WHERE id=' . (int)$_GET["id"] . ';') as $row;
 	
 	//echo '<b>' . $row['book'] . ' </b>' . $row['chapter'] . ':' . $row['verse'] . ' - "' . $row['content'] . '"<br><br>';
-
-	
 
 ?> 
 </body>
