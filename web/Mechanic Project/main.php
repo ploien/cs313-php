@@ -9,12 +9,34 @@
      
      <?php
      
-        require_once 'connection.php';
+         try
+         {
+             $dbUrl = getenv('DATABASE_URL');
+             
+             $dbOpts = parse_url($dbUrl);
+             
+             $dbHost = $dbOpts["host"];
+             $dbPort = $dbOpts["port"];
+             $dbUser = $dbOpts["user"];
+             $dbPassword = $dbOpts["pass"];
+             $dbName = ltrim($dbOpts["path"],'/');
+             
+             $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+             
+             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+         }
+         catch (PDOException $ex)
+         {
+             echo 'Error!: ' . $ex->getMessage();
+             die();
+         }
+         
+        //require 'connection.php';
         
-        $stmt = $db->prepare('SELECT name_last, name_first, address, phone FROM owner');
+        $stmt = $db->prepare('SELECT name_last, name_first, address, phone_number FROM owner');
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        $list = "<ul>";
+        $list = '<ul>';
         
         foreach($rows as $row)
         {
