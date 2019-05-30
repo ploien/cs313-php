@@ -16,9 +16,9 @@
         
         $list = "<ul id=customerList>";
         
-        foreach($rows)
+        foreach($rows as $row)
         {
-            $list .= '<li>' . $rows['name_last'] . ',' . $rows['name_first'] . ',' . $rows['phone_number'] . '</li>';
+            $list .= '<li>' . $row['name_last'] . ',' . $row['name_first'] . ',' . $row['phone_number'] . '</li>';
         }
         
         $list .= '</ul>';
