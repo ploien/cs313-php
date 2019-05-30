@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-
    <head>
    </head>
-   
   <body>
      <header><h1>Work Tracker</h1></header>
      
      <h2>Customer Directory</h2>
      
      <?php
+     
         require_once 'connection.php';
         
-        $statement = $db->query('SELECT name_last, name_first, address, phone FROM owner');
+        $stmt = $db->prepare('SELECT name_last, name_first, address, phone FROM owner');
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         $list = "<ul id=customerList>";
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+        
+        foreach($rows)
         {
-            $list .= '<li>' . $row['name_last'] . ',' . $row['name_first'] . ',' . $row['phone_number'] . '</li>';
+            $list .= '<li>' . $rows['name_last'] . ',' . $rows['name_first'] . ',' . $rows['phone_number'] . '</li>';
         }
         
         $list .= '</ul>';
-        
         echo $list;
      ?>
      
