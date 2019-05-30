@@ -14,7 +14,7 @@
         $stmt = $db->prepare('SELECT name_last, name_first, address, phone FROM owner');
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        $list = "<ul id=customerList>";
+        $list = "<ul>";
         
         foreach($rows as $row)
         {
