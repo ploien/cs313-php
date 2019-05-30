@@ -10,7 +10,7 @@
      <h2>Customer Directory</h2>
      
      <?php
-        require_once 'connections.php';
+        require_once 'connection.php';
         
         $statement = $db->query('SELECT name_last, name_first, address, phone FROM owner');
         
