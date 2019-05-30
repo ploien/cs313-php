@@ -1,0 +1,50 @@
+									vehicle
+								
+    Column     |  Type   | Collation | Nullable |               Default
+---------------+---------+-----------+----------+--------------------------------------
+ vin           | integer |           | not null | nextval('vehicle_vin_seq'::regclass)
+ make          | text    |           | not null |
+ model         | text    |           | not null |
+ vehicle_year  | integer |           | not null |
+ work_order_id | integer |           |          |
+ owner_id      | integer |           |          |
+ 
+ 
+ 
+
+                                     work_order
+									 
+    Column     |  Type   | Collation | Nullable |                      Default
+---------------+---------+-----------+----------+---------------------------------------------------
+ work_order_id | integer |           | not null | nextval('work_order_work_order_id_seq'::regclass)
+ labor_hours   | real    |           |          |
+ cost          | real    |           |          |
+ start_date    | date    |           | not null |
+ end_date      | date    |           |          |
+ vin           | integer |           |          |
+ 
+ 
+ 
+                                      part
+									  
+      Column      |  Type   | Collation | Nullable |                  Default
+------------------+---------+-----------+----------+-------------------------------------------
+ part_number      | integer |           | not null | nextval('part_part_number_seq'::regclass)
+ part_description | text    |           | not null |
+ manufacturer     | text    |           | not null |
+ vendor           | text    |           | not null |
+ price            | real    |           | not null |
+ purchase_date    | date    |           | not null |
+ receipt_number   | text    |           | not null |
+ work_order_id    | integer |           |          |
+ 
+										owner
+ 
+     Column    |  Type   | Collation | Nullable |                 Default
+--------------+---------+-----------+----------+-----------------------------------------
+ owner_id     | integer |           | not null | nextval('owner_owner_id_seq'::regclass)
+ name_last    | text    |           | not null |
+ name_first   | text    |           | not null |
+ phone_number | text    |           |          |
+ email        | text    |           |          |
+ address      | text    |           |          |
