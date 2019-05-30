@@ -8,6 +8,7 @@
      <header><h1>Work Tracker</h1></header>
      
      <h2>Customer Directory</h2>
+     
      <?php
         require_once 'connections.php';
         
