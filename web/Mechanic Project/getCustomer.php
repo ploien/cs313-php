@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
    
 </head>
@@ -23,16 +22,14 @@
         $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
         
         
-        foreach($statement as $row)
+        foreach($rows as $row)
         {
             $table .= '<tr><td>' . $row['make'] . '</td><td>' . $row['model'] . '</td><td>' . $row['vehicle_year'] . '</td><td>' . $row['vin'] . '</td></tr>';
             
         }
         
         $table .= '</table>';
-        
         echo $table;
-        
    ?>
 
 </body>
