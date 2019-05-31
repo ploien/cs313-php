@@ -8,7 +8,7 @@
 	<h1>Customer Record
 	<h2>Personal Information</h1>
 	
-	
+	<?php echo $_POST["customerId"]; ?>
    <?php
         require 'connection.php';
         

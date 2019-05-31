@@ -11,6 +11,7 @@
      <?php
         require 'connection.php';
         
+  
         $list = '<ul>';
         
         foreach($db->query('SELECT name_last, name_first, phone_number, owner_id FROM owner') as $row)
