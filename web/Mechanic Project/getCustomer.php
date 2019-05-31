@@ -11,7 +11,7 @@
     <?php
         require 'connection.php';
         
-        $id = filter_input(INPUT_POST, 'customerId', FILTER_SANITIZE_STRING);
+        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
         
         $table = '<table id=vehicles><tr><th>Make</th><th>Model</th><th>Year</th><th>VIN</th></tr>';
         
