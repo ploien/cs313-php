@@ -5,14 +5,13 @@
 </head>
 
 <body>
-	<h1>Customer Record
-	<h2>Personal Information</h1>
+	<h1>Customer Record</h1>
+	<h2>Personal Information</h2>
 	
-	<?php echo $_POST["customerId"]; ?>
-   <?php
+    <?php
         require 'connection.php';
         
-        $id = $_POST["customerId"];
+        $id = filter_input(INPUT_POST, 'customerId', FILTER_SANITIZE_STRING);
         
         $table = '<table id=vehicles><tr><th>Make</th><th>Model</th><th>Year</th><th>VIN</th></tr>';
         
