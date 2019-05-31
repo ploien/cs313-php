@@ -10,11 +10,13 @@
  require_once 'connections.php';
  
  echo "<h1>Scripture Resources</h1>";
+ 
+ $stmt = d
 
- foreach ($db->query('SELECT * FROM Scriptures') as $row)
+ foreach($db->query('SELECT * FROM Scriptures') as $rows)
  {
-   $queryString = "id=" . $row["id"];
-   echo '<a href=scriptureDetails.php?' . $queryString . '><b>' . $row['book'] . ' </b>' . $row['chapter'] . ':' . $row['verse'] . ' - "' . '"</a><br><br>';
+   $queryString = "id=" . $rows["id"];
+   echo '<a href=scriptureDetails.php?' . $queryString . '><b>' . $rows['book'] . ' </b>' . $rows['chapter'] . ':' . $row['verse'] . ' - "' . '"</a><br><br>';
  }
 
  ?>
