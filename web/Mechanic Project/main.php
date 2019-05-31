@@ -16,7 +16,7 @@
         
         foreach($db->query('SELECT name_last, name_first, phone_number, owner_id FROM owner') as $row)
         {
-            $list .= '<li>' . $row['name_last'] . ',' . $row['name_first'] . '   ' . $row['phone_number'] .  '<button name=id type=submit value=';
+            $list .= '<li>' . $row['name_last'] . ', ' . $row['name_first'] . ' ' . $row['phone_number'] .  '<button name=id type=submit value=';
             $list .= $row['owner_id'] . '>Retrieve Info</button></li>';
         }
         
