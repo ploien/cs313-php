@@ -23,7 +23,7 @@
         
         foreach($rows as $row)
         {
-            $table .= '<tr><td>' . $row['vehicle.make'] . '</td><td>' . $row['vehicle.model'] . '</td><td>' . $row['vehicle.vehicle_year'] . '</td><td>' . $row['vehicle.vin'] . '</td></tr>';
+            $table .= '<tr><td>' . $row['make'] . '</td><td>' . $row['model'] . '</td><td>' . $row['vehicle_year'] . '</td><td>' . $row['vin'] . '</td></tr>';
             
         }
         
