@@ -22,8 +22,11 @@
         $statement1->execute();
         $customerInfo = $statement1->fetchAll(PDO::FETCH_ASSOC);
         
-        $customer = '<div id=customerInfo><h3>Customer Information</h3><h4>Name</h4><p>' . $customerInfo[0]['name_last'] . ', ' . $customerInfo[0]['name_first'];
-        $customer = '</p><h4>Phone</h4><p>' . $customerInfo[0]['phone_number'] . '</p><h4>Address</h4><p>' . $customerInfo[0]['address'] . '</p></div>';
+        foreach ($customerInfo as $row)
+        {
+            $customer = '<div id=customerInfo><h3>Customer Information</h3><h4>Name</h4><p>' . $row['name_last'] . ', ' . $row['name_first'];
+            $customer = '</p><h4>Phone</h4><p>' . $row['phone_number'] . '</p><h4>Address</h4><p>' . $row['address'] . '</p></div>';
+        }
         
         echo $customer;
         
