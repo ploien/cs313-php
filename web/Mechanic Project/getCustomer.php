@@ -6,10 +6,6 @@
 
 <body>
 	<h1>Customer Record</h1>
-	<h2>Personal Information</h2>
-	
-	
-	
 	
     <?php
         require 'connection.php';
@@ -25,7 +21,7 @@
         foreach ($customerInfo as $row)
         {
             $customer = '<div id=customerInfo><h3>Customer Information</h3><h4>Name</h4><p>' . $row['name_last'] . ', ' . $row['name_first'];
-            $customer = '</p><h4>Phone</h4><p>' . $row['phone_number'] . '</p><h4>Address</h4><p>' . $row['address'] . '</p></div>';
+            $customer .= '</p><h4>Phone</h4><p>' . $row['phone_number'] . '</p><h4>Address</h4><p>' . $row['address'] . '</p></div>';
         }
         
         echo $customer;
