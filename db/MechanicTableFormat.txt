@@ -19,7 +19,7 @@
  work_order_id | integer |           | not null | nextval('work_order_work_order_id_seq'::regclass)
  labor_hours   | real    |           |          |
  cost          | real    |           |          |
- start_date    | date    |           | not null |
+ start_date    | date    |           | not null |	
  end_date      | date    |           |          |
  vin           | integer |           |          |
  
