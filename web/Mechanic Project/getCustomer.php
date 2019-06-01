@@ -17,7 +17,7 @@
         $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
         
         //Display owner information
-        $statement1 = $db->statement('SELECT * FROM owner WHERE owner_id=:id');
+        $statement1 = $db->prepare('SELECT * FROM owner WHERE owner_id=:id');
         $statement1->bindValue(':id', $id, PDO::PARAM_INT);
         $statement1->execute();
         $customerInfo = $statement1->fetchAll(PDO::FETCH_ASSOC);
