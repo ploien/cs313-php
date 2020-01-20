@@ -12,8 +12,8 @@
         <div>
             <h2 id="aboutMeHeader">About Me</h2>
             <div class="text">
-            	<p>I'm originally from Seattle, WA but currently live in Rexburg, ID in order to attend school and major in Software Engineering.
-            	<br>My wife is from Mexico City and I served  a Mission in Oaxaca, Mexico, so we enjoy speaking Spanish with each other at home.</p>
+            	<p>My name's Peter Oien and I'm currently enrolled as a Software Engineering Major at BYU Idaho. I'm from Seattle, WA and currently live in Aberdeen, WA.
+				   My wife and I recently welcomed our first child, a now 8 month old daughter.</p>
             </div>
         </div>
         
