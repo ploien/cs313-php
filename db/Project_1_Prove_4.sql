@@ -1,20 +1,36 @@
 /*
-1.	Vehicle
-	a.	VIN
-	b.	Make 
-	c.	Model
-	d.	Year
-	e.	Work Order ID 
-	f.	Owner ID
+1. user                  //Account user
+   a. user_id PK
+   b. user_name NOT NULL UNIQUE
+   c. password NOT NULL
+
+
+2.	owner                 //The vehicle owner
+	a.	owener_id PK
+	b.	name_last
+	c.	name_first
+	d.  phone_number
+	e.	email
+	f.	address
+
+
+3.	vehicle   			 //Vehicle info
+	a.	vehicle_id PK
+	b.	make NOT NULL	
+	c.	model NOT NULL
+	d.	year NOT NULL
+	f.	Owner ID FK
 	
-2.	Work order
-	a.	ID
-	b.	Labor Hours
-	c.	Cost
-	d.	Start date
-	e.	End date (if complete)
-	g.	Vehicle VIN
+4.	work_order           //work order for repairs done on vehicle
+	a.	work_order_id PK
+	b.	labor_hours NOT NULL
+	c.	cost NOT NULL
+	d.	start_date NOT NULL
+	e.	end_date (if complete) NOT NULL
+	g.	Vehicle_id FK
 	
+	
+	//This is being left out until I figure out  a good way to include them
 3.	Part
 	a.	Part Number
 	b.	Part Description
@@ -25,47 +41,16 @@
 	g.	Receipt Number
 	h.	Work Order Number
 	
-4.	Owner
-	a.	ID
-	b.	Last Name
-	c.	First Name
-	d.	Phone Number
-	e.	Email
-	f.	Address
 */
 
 CREATE TABLE users (
-   user_name text UNIQUE PRIMARY KEY,
+   user_id SERIAL PRIMARY KEY,
+   user_name text UNIQUE NOT NULL,
    password text NOT NULL
 );
 
-CREATE TABLE vehicle (
-	vin SERIAL UNIQUE PRIMARY KEY,
-	make text NOT NULL,
-	model text NOT NULL,
-	vehicle_year integer NOT NULL
-);
-
-CREATE TABLE work_order (
-	work_order_id SERIAL UNIQUE PRIMARY KEY,
-	labor_hours float(2),
-	cost float(2),
-	start_date date NOT NULL,
-	end_date date
-);
-
-CREATE TABLE part (
-	part_number SERIAL UNIQUE PRIMARY KEY,
-	part_description text NOT NULL,
-	manufacturer text NOT NULL, 
-	vendor text NOT NULL,
-	price float(2) NOT NULL,
-	purchase_date date NOT NULL,
-	receipt_number text NOT NULL
-);
-
 CREATE TABLE owner (
-	owner_id SERIAL UNIQUE PRIMARY KEY,
+	owner_id SERIAL PRIMARY KEY,
 	name_last text NOT NULL,
 	name_first text NOT NULL,
 	phone_number text,
@@ -73,40 +58,38 @@ CREATE TABLE owner (
 	address text
 );
 
-ALTER TABLE vehicle 
-ADD COLUMN work_order_id integer REFERENCES work_order,
-ADD COLUMN owner_id integer REFERENCES owner;
+CREATE TABLE vehicle (
+	vehicle_id SERIAL PRIMARY KEY,
+	make text NOT NULL,
+	model text NOT NULL,
+	vehicle_year integer NOT NULL,
+	owner_id INTEGER REFERENCES owner (owner_id)
+);
 
-ALTER TABLE work_order 
-ADD COLUMN vin integer REFERENCES vehicle;
-
-ALTER TABLE part
-ADD COLUMN work_order_id integer REFERENCES work_order;
-
+CREATE TABLE work_order (
+	work_order_id SERIAL PRIMARY KEY,
+	labor_hours float(2),
+	cost float(2),
+	start_date date NOT NULL,
+	end_date date,
+	vehicle_id INTEGER REFERENCES vehicle (vehicle_id)
+);
 
 INSERT INTO owner (name_last, name_first, phone_number, email, address) VALUES 
 	('Wazowski', 'Mike', '234-412-1234', 'mike@hotmail.com', '123 Monster ln. Topeka, KS 81231'),
 	('Smith', 'Robert', '251-651-6122', 'robsmith@gmail.com', '651 Alpine St. Apt. 123 Tacoma, WA'),
 	('McDonald', 'Ronald', '531-231-5123', 'ronmcdon@mcdonalds.com', '451 Big Mac Ave. New York');
 	
-INSERT INTO vehicle (make, model, vehicle_year) VALUES
-	('Ford', 'Ranger', 1998),
-	('Mazda', 'Protege', 2002),
-	('Ferrari', '488 Spider', 2018),
-	('Land Rover', 'Range Rover', 2008);
-	
-UPDATE vehicle SET owner_id = (SELECT owner_id FROM owner WHERE (name_last = 'Smith' AND name_first = 'Robert'))
-WHERE (make = 'Ford' OR make = 'Mazda');
+INSERT INTO vehicle (make, model, vehicle_year, owner_id) VALUES
+	('Ford', 'Ranger', 1998,(SELECT owner_id FROM owner WHERE (name_last = 'Smith' AND name_first = 'Robert'))),
+	('Mazda', 'Protege', 2002, (SELECT owner_id FROM owner WHERE (name_last = 'Smith' AND name_first = 'Robert'))),
+	('Ferrari', '488 Spider', 2018, (SELECT owner_id FROM owner WHERE (name_last = 'McDonald' AND name_first = 'Ronald'))),
+	('Land Rover', 'Range Rover', 2008, (SELECT owner_id FROM owner WHERE (name_last = 'Wazowski' AND name_first = 'Mike')));
 
-UPDATE vehicle SET owner_id = (SELECT owner_id FROM owner WHERE (name_last = 'Wazowski' AND name_first = 'Mike'))
-WHERE (make = 'Land Rover');
 
-UPDATE vehicle SET owner_id = (SELECT owner_id FROM owner WHERE (name_last = 'McDonald' AND name_first = 'Ronald'))
-WHERE (make = 'Ferrari');
-
-INSERT INTO work_order (labor_hours, cost, start_date, vin) VALUES
-	(2, 240, current_date, (SELECT vin FROM vehicle WHERE model = 'Ranger')),
-	(3, 160, current_date, (SELECT vin FROM vehicle WHERE model = '488 Spider'));
+INSERT INTO work_order (labor_hours, cost, start_date, vehicle_id) VALUES
+	(2, 240, current_date, (SELECT vehicle_id FROM vehicle WHERE model = 'Ranger')),
+	(3, 160, current_date, (SELECT vehicle_id FROM vehicle WHERE model = '488 Spider'));
 	
 
 
